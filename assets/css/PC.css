@@ -75,7 +75,12 @@ body{
 .container2 > p:first-child{
     align-self: center;
     font-size:5vh;
+    border-radius: 2vh;
+    background: #14b4cc;
+    color:#fff;
     margin: 0;
+    padding-left:1vw;
+    padding-right:1vw;
 }
 
 .container2 > p{
@@ -98,5 +103,5 @@ body{
     border:none;
     background: #0f889b;
     color: #fff;
-    border-radius: 10px;
+    border-radius: 2vh;
 }
