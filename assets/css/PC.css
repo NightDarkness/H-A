@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+*{
+    font-family: 'Pacifico', cursive;
+    font-size:3vh;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background: #14b4cc;
+    display:flex;
+    justify-content: center;
+    margin:0;
+    padding: 0;
+}
+
+.hidden{
+    opacity:0;
+    z-index: -20;
+}
+
+.container{
+    z-index: 1;
+    background: #ffffff;
+    width: 80vh;
+    height: 80vh;
+    box-shadow: -1vh 1vh 2vh 0.05vh #111;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    border-radius: 1.5vh;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
+.divisor-1{
+    width: 100%;
+    height: 50%;
+}
+
+.divisor-2{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    display:flex;
+}
+
+.divisor-2 > img{
+    object-fit: contain;
+    width:100%;
+    height:100%;
+    border-radius: 1.5vh;
+}
+
+.divisor-2 > img:nth-child(1){
+    align-self: left;
+}
+
+.container2{
+    z-index: 2;
+    width: 80vh;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
+.container2 > p:first-child{
+    align-self: center;
+    font-size:5vh;
+    margin: 0;
+}
+
+.container2 > p{
+    align-self: center;
+    font-size:3vh;
+}
+
+.container2 > div{
+    align-self: center;
+}
+
+.container2 > div > button{
+    border:none;
+    background: #14b4cc;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.container2 > div > button:hover{
+    border:none;
+    background: #0f889b;
+    color: #fff;
+    border-radius: 10px;
+}
