@@ -9,11 +9,68 @@ body{
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-    background: #14b4cc;
     display:flex;
     justify-content: center;
     margin:0;
     padding: 0;
+}
+
+.bg{
+    width: 100vw;
+    height:100vh;
+    background: #14b4cc;
+    margin:0;
+    padding: 0;
+    z-index: 1;
+}
+
+.blur{
+    background: #14b4cc url("../img/jardin.png") no-repeat;
+    background-size:100% 100%;
+    filter: blur(8px);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.intro{
+    opacity:0%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    animation: disolve 2.5s;
+    text-align: center;
+}
+
+.intro > span{
+    background: #14b4cc;
+    border-radius: 2vh;
+    font-size:8vh;
+    font-weight: 300;
+    color: white;
+    align-self: center;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+@keyframes disolve{
+    0%{
+        opacity:100%;
+        z-index: 5;
+    }
+    80%{
+        opacity:100%;
+        z-index: 5;
+    }
+    100%{
+        opacity:0%;
+        z-index: 5;
+    }
 }
 
 .hidden{
@@ -22,7 +79,7 @@ body{
 }
 
 .container{
-    z-index: 1;
+    z-index: 2;
     background: #ffffff;
     width: 80vh;
     height: 80vh;
@@ -41,22 +98,11 @@ body{
     height: 50%;
 }
 
-.divisor-2{
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
-    display:flex;
-}
-
-.divisor-2 > img{
-    object-fit: contain;
+.divisor-1 > img{
+    object-fit: fixed;
     width:100%;
     height:100%;
     border-radius: 1.5vh;
-}
-
-.divisor-2 > img:nth-child(1){
-    align-self: left;
 }
 
 .container2{
@@ -72,34 +118,59 @@ body{
     position: absolute;
 }
 
-.container2 > p:first-child{
+.subcontainer{
+    width: 60%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-self: center;
+}
+
+.subcontainer > p{
+    align-self: center;
+    text-align: center;
+}
+
+#title{
     font-size:5vh;
-    border-radius: 2vh;
-    background: #14b4cc;
-    color:#fff;
-    margin: 0;
-    padding-left:1vw;
-    padding-right:1vw;
+    margin:0;
+    margin-bottom: 2vh;
+    padding:0;
 }
 
-.container2 > p{
+#subtitle{
+    font-size:4vh;
+    margin:0;
+    margin-bottom: 2vh;
+    padding:0;
+}
+
+#text{
+    font-size:2.5vh;
+}
+
+#day{
+    margin-top: 0.5vh;
+    margin-bottom: 0;
+}
+
+#date{
+    margin-top: 0.5vh;
+}
+
+.subcontainer > div{
     align-self: center;
-    font-size:3vh;
 }
 
-.container2 > div{
-    align-self: center;
-}
-
-.container2 > div > button{
+.subcontainer > div > button{
     border:none;
     background: #14b4cc;
     color: #fff;
-    border-radius: 10px;
+    border-radius: 2vh;
 }
 
-.container2 > div > button:hover{
+.subcontainer > div > button:hover{
     border:none;
     background: #0f889b;
     color: #fff;
