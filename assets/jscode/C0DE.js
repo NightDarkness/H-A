@@ -50,7 +50,7 @@ function disableMenu(){
 
 function enableMenu(){
     document.querySelector("#b0").setAttribute("onclick", "state(1)");
-    document.querySelector("#b1").setAttribute("onclick", "state(9)");
+    document.querySelector("#b1").setAttribute("onclick", "state(10)");
     document.querySelector("#b2").setAttribute("onclick", "state(0)");
     document.querySelector("#b3").setAttribute("onclick", "state(2)");
     document.querySelector("#b4").setAttribute("onclick", "state(1)");
@@ -118,7 +118,7 @@ function msg(){
 function send(NAME, value){
 
     let data = {
-        form_name: NAME,
+        from_name: NAME,
         message: value
     };
 
