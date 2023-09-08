@@ -125,6 +125,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-self: center;
+    position: absolute;
 }
 
 .subcontainer > p{
@@ -175,9 +176,80 @@ body{
     font-size:4.5vw;
 }
 
-.subcontainer > div > button:hover{
-    border:none;
-    background: #0f889b;
-    color: #fff;
-    border-radius: 2vw;
+.subcontainer > form{
+    display: flex;
+    justify-content: center;
+}
+
+#input{
+    width: 30%;
+    align-self: center;
+    text-align: center;
+}
+
+.images{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 8%;
+}
+
+.images > img{
+    object-fit: contain;
+    width:30%;
+}
+
+a{
+    position: absolute;
+    opacity:0;
+    z-index:-1;
+}
+
+/* Animaciones y estados */
+
+.active{
+    z-index: 1;
+    opacity: 1;
+    width:80%;
+    height:80%;
+    position:static;
+    align-self: center;
+}
+
+@keyframes in {
+    0%{
+        z-index: -2;
+        opacity: 0;
+    }
+    100%{
+        z-index: 1;
+        opacity: 1;
+    }
+}
+
+@keyframes out {
+    0%{
+        z-index: 1;
+        opacity: 1;
+    }
+    100%{
+        z-index: -2;
+        opacity: 0;
+    }
+}
+
+@keyframes banner-animation {
+    
+    0%{
+        opacity: 1;
+        z-index: 5;
+    }
+    50%{
+        opacity: 1;
+        z-index: 5;
+    }
+    100%{
+        opacity:0;
+        z-index: -20;
+    }
 }
