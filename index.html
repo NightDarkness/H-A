@@ -13,6 +13,16 @@
         <meta property="og:description" content=Nos casamos este xx de Octubre, ven con nosotros a festejar nuestro compromiso con familia y amigos.>
         <meta property="og:type" content=profile>
         <meta property="og:image" content=https://raw.githubusercontent.com/NightDarkness/H-A/gh-pages/assets/img/thumbnail.png>
+
+        <script type="text/javascript">
+            window.addEventListener("keypress", function(event){
+                if (event.keyCode == 13){
+                    event.preventDefault();
+                }
+            }, false);
+ 
+        </script>
+
     </head>
     <body>
         <script src="assets/jscode/C0DE.js" type="text/javascript"></script>
@@ -151,7 +161,7 @@
             <div id="four" class="subcontainer hidden">
                 <p id="title" class="selector">¡Tienes X pases!</p>
                 <p id="subtitle">Cuantos asistiran?</p>
-                <form id="form">
+                <form id="form" onkeypress="return null">
                     <input id="input" type="number" maxlength="1" placeholder="Asistentes">
                 </form>
                 <div>
