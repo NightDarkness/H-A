@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans&display=swap');
+
 
 *{
-    font-family: 'Pacifico', cursive;
+    font-family: 'Questrial', sans-serif;
     font-size:3vh;
 }
 
@@ -48,6 +53,7 @@ body{
 }
 
 .intro > span{
+    font-family: 'Pacifico';
     background: #14b4cc;
     border-radius: 2vw;
     font-size:8vw;
@@ -78,6 +84,12 @@ body{
     z-index: -20;
 }
 
+.variable{
+    opacity: 0;
+    position: absolute;
+    z-index: -20;
+}
+
 .container{
     z-index: 2;
     background: #ffffff;
@@ -92,6 +104,12 @@ body{
     padding: 0;
     position: absolute;
 }
+
+#bg2 > img{
+    object-fit: fill;
+    width:100%;
+    height:100%;
+} 
 
 .divisor-1{
     width: 100%;
@@ -139,6 +157,7 @@ body{
     margin-bottom: 2vw;
     margin-top:8vw;
     padding:0;
+    font-family: 'Pacifico';
 }
 
 #subtitle{
@@ -146,6 +165,7 @@ body{
     margin:0;
     margin-bottom: 2vw;
     padding:0;
+    font-family: 'Marcellus', serif;
 }
 
 #text{
@@ -156,11 +176,20 @@ body{
     font-size:5vw;
     margin-top: 2vw;
     margin-bottom: 0;
+    font-family: 'Source Serif 4', serif;
 }
 
 #date{
     font-size:4.5vw;
     margin-top: 2vw;
+}
+
+.b{
+    font-family: 'Albert Sans', sans-serif;
+    padding: 1vw;
+    min-width: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .subcontainer > div{
@@ -197,6 +226,13 @@ body{
 .images > img{
     object-fit: contain;
     width:30%;
+}
+
+#nine > img{
+    align-self: center;
+    object-fit: contain;
+    width: 80%;
+    height: 80%;
 }
 
 a{

@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link id="style" rel="stylesheet" href="assets/css/PC.css">
-        <link rel="shortcut icon" href="assets/img/nfc-logo.png">
+        <!-- <link rel="shortcut icon" href="assets/img/nfc-logo.png"> -->
         <title>¡Estan invitados!</title>
         <meta property="og:title" content=Invitacion a nuestra boda, de Hiram & Angelica>
         <meta property="og:site_name" content=¡Estan invitados!>
@@ -88,7 +88,6 @@
             }
         </style> -->
 
-
         <div class="intro blur">
         </div>
 
@@ -99,7 +98,7 @@
         <div class="bg blur">
         </div>
 
-        <div class="container">
+        <div id="bg1" class="container">
 
             <div class="divisor-1">
                 
@@ -116,10 +115,16 @@
 
         </div>
 
+        <div id="bg2" class="container hidden">
+
+            <img src="assets/img/invitacion1.png">
+
+        </div>
+
         <div class="container2">
-            <div id="zero" class="subcontainer active">
+            <div id="zero" class="subcontainer hidden">
                 <p id="title">¡Nos casamos!</p>
-                <p id="subtitle">Hiram & Angelica</p>
+                <p id="subtitle">- Hiram & Angelica -</p>
                 <p id="text">Para nosotros es fundamental compartir la alegria de nuestro matrimonio con ustedes, por eso nos gustaria que nos acompañen el:</p>
                 <p id="day">SABADO</p>
                 <p id="date">4 | Noviembre | 2023</p>
@@ -160,7 +165,7 @@
             </div>
             <div id="four" class="subcontainer hidden">
                 <p id="title" class="selector">¡Tienes X pases!</p>
-                <p id="subtitle">Cuantos asistiran?</p>
+                <p id="subtitle">¿Cuantos asistiran?</p>
                 <form id="form" onkeypress="return null">
                     <input id="input" type="number" maxlength="1" placeholder="Asistentes">
                 </form>
@@ -170,16 +175,30 @@
                 </div>
             </div>
             <div id="nine" class="subcontainer hidden">
-                <p id="title">¡Te esperamos!</p>
+                
+                    <img src="assets/img/invitacion2.png">
+                
                 <div>
-                    <button class="b" id="b10" onclick="download()">Descargar invitacion</button>
-                    <button class="b" id="b11" onclick="state(0)">Cambie de opinion</button>
+                    <button class="b" id="b10" onclick="confirmacion('No')">No</button>
+                    <button class="b" id="b11" onclick="confirmacion('Si')">Si</button>
                 </div>
-            </div><div id="ten" class="subcontainer hidden">
+                <div style="margin-top: 15px;">
+                    <button class="b" id="b12" onclick="back()">Atras</button>
+                </div>
+            </div>
+            <div id="ten" class="subcontainer hidden">
+                <p id="title">¡Los esperamos!</p>
+                <p id="text"> Descargar invitaciones</p>
+                <div>
+                    <button class="b" id="b13" onclick="download(0)">Recepcion</button>
+                    <button class="b" id="b14" onclick="download(1)">Cena</button>
+                </div>
+            </div>
+            <div id="eleven" class="subcontainer hidden">
                 <p id="title">¡Son importantes para nosotros!</p>
                 <p id="text">Siempre son bienvenidos, si cambian de opinion pueden tomar sus pases en el boton de abajo</p>
                 <div>
-                    <button class="b" id="b12" onclick="state(0)">Cambie de opinion</button>
+                    <button class="b" id="b15" onclick="state(0)">Cambie de opinion</button>
                 </div>
             </div>
         </div>

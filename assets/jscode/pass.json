@@ -1,7 +1,16 @@
 {
     "invitados":{
-        "Paola": 3,
-        "Carlos": 2,
-        "Fernando": 1
+        "Paola": {
+            "registro": false,
+            "pases": 3
+        },
+        "Carlos": {
+            "registro": true,
+            "pases": 2
+        },
+        "Fernando": {
+            "registro": false,
+            "pases": 1
+        }
     }
 }

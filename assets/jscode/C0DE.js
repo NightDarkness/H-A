@@ -32,9 +32,15 @@ async function reload_content() {
             console.log("invitados: 404");
         }
 
+        if(data['invitados'][NAME]['registro']){
+            document.querySelector('#ten').setAttribute('class', 'subcontainer active');
+        }else{
+            document.querySelector('#zero').setAttribute('class', 'subcontainer active');
+        }
 
-        document.querySelector(".selector").innerHTML = ("¡Tienes " + data['invitados'][NAME] + " pases!");
-        document.querySelector("#input").setAttribute("maxlength", data['invitados'][NAME]);
+
+        document.querySelector(".selector").innerHTML = ("¡Tienes " + data['invitados'][NAME]['pases'] + " pases!");
+        document.querySelector("#input").setAttribute("maxlength", data['invitados'][NAME]['pases']);
 
         verify();
 
@@ -59,9 +65,12 @@ function enableMenu(){
     document.querySelector("#b7").setAttribute("onclick", "state(4)");
     document.querySelector("#b8").setAttribute("onclick", "state(3)");
     document.querySelector("#b9").setAttribute("onclick", "verify()");
-    document.querySelector("#b10").setAttribute("onclick", "download()");
-    document.querySelector("#b11").setAttribute("onclick", "state(0)");
-    document.querySelector("#b12").setAttribute("onclick", "state(0)");
+    document.querySelector("#b10").setAttribute("onclick", "confirmacion('No')");
+    document.querySelector("#b11").setAttribute("onclick", "confirmacion('Si')");
+    document.querySelector("#b12").setAttribute("onclick", "back()");
+    document.querySelector("#b13").setAttribute("onclick", "download(0)");
+    document.querySelector("#b14").setAttribute("onclick", "download(1)");
+    document.querySelector("#b15").setAttribute("onclick", "state(0)");
 }
 
 async function state(id){
@@ -115,19 +124,48 @@ function msg(){
     window.open(url);
 }
 
-function send(NAME, value){
+async function send(value, confirmacion){
 
-    let data = {
+    const 
+        url_values = window.location.search,
+        url_params = new URLSearchParams(url_values);
+
+    let NAME = url_params.get("NAME");
+
+    let mail = {
         from_name: NAME,
-        message: value
+        message: 'Hola Hiram y Angelica, confirmo que asistire a la ceremonio y recepcion utilizando ' + value + ' pases y ' + confirmacion + ' asistire a la cena.',
+        pases: value,
+        cena: confirmacion
     };
 
-    emailjs.send('default_service', 'template_wrtytgg', data, 'aoHKedVynHDdrywaD')
+    emailjs.send('default_service', 'template_wrtytgg', mail, 'aoHKedVynHDdrywaD')
     .then(function(response) {
        console.log('SUCCESS!', response.status, response.text);
     }, function(error) {
        console.log('FAILED...', error);
     });
+}
+
+async function changeBG(type){
+    let BG = document.querySelector('.bg');
+
+    BG.style.animation = "out 1s";
+    BG1 = 
+    await sleep(900);
+    switch(type){
+        case 0:
+            BG.style.background = 'url(assets/img/restaurante.png)';
+            document.querySelector('#bg1').classList.add('hidden');
+            document.querySelector('#bg2').classList.remove('hidden');
+            break;
+        case 1:
+            BG.style.background = 'url(assets/img/jardin.png)';
+            document.querySelector('#bg2').classList.add('hidden');
+            document.querySelector('#bg1').classList.remove('hidden');
+            break;
+    }
+    BG.style.animation = "in 1s";
 }
 
 async function verify(){
@@ -152,11 +190,12 @@ async function verify(){
     }
 
     if(document.querySelector('#four').classList.contains('active')){
-        if(document.querySelector('#input').value <= data['invitados'][NAME] && document.querySelector('#input').value > 0){
+        if(document.querySelector('#input').value <= data['invitados'][NAME]['pases'] && document.querySelector('#input').value > 0){
             state(9)
-            send(NAME, document.querySelector('#input').value);
+            changeBG(0);
+            //send(NAME, document.querySelector('#input').value);
             console.log("200");
-        }else if(document.querySelector('#input').value > data['invitados'][NAME]){
+        }else if(document.querySelector('#input').value > data['invitados'][NAME]['pases']){
             console.log("TOO MUCH PEOPLE");
             alert("Lo siento no disponen de tantos pases");
         }else if(document.querySelector('#input').value <= 0 || document.querySelector('#input').value === NULL){
@@ -167,10 +206,30 @@ async function verify(){
 
 }
 
-function download(){
-    let 
-        source = 'assets/img/inv.png',
-        a = document.createElement('a');
+function back(){
+    state(4);
+    changeBG(1);
+}
+
+function confirmacion(response){
+    send(document.querySelector('#input').value, response);
+    state(10);
+}
+
+function download(type){
+
+    let source;
+
+    switch(type){
+        case 0:
+            source = 'assets/img/inv.png';
+            break;
+        case 1:
+            source = 'assets/img/inv2.png';
+            break;
+    }
+
+    let a = document.createElement('a');
 
     a.download = true;
     a.target = '_blank';
