@@ -33,9 +33,11 @@ async function reload_content() {
         }
 
         if(data['invitados'][NAME]['registro']){
-            document.querySelector('#ten').setAttribute('class', 'subcontainer active');
+            document.querySelector('#ten').classList.add('active');
+            document.querySelector('#ten').classList.remove('hidden');
         }else{
-            document.querySelector('#zero').setAttribute('class', 'subcontainer active');
+            document.querySelector('#zero').classList.add('active');
+            document.querySelector('#zero').classList.remove('hidden');
         }
 
 
