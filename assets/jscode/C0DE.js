@@ -54,10 +54,10 @@ async function render_content() {
     }
 
     if(data['pases'] <= 1){
-        document.querySelector('#b0').innerHTML = 'Asistire';
-        document.querySelector('#b1').innerHTML = 'No podre'
-        document.querySelector('#b10').innerHTML = 'No ire';
-        document.querySelector('#b11').innerHTML = 'Asistire';
+        document.querySelector('#b0').innerHTML = 'Asistiré';
+        document.querySelector('#b1').innerHTML = 'No podré'
+        document.querySelector('#b10').innerHTML = 'No iré';
+        document.querySelector('#b11').innerHTML = 'Asistiré';
     }
 
     document.querySelector(".selector").innerHTML = ("¡Tienes " + data['pases'] + " pases!");
