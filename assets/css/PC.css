@@ -68,6 +68,14 @@ body{
 
 @keyframes disolve{
     0%{
+        opacity:0%;
+        z-index: 5;
+    }
+    10%{
+        opacity:0%;
+        z-index: 5;
+    }
+    11%{
         opacity:100%;
         z-index: 5;
     }

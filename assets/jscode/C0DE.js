@@ -38,13 +38,13 @@ async function render_content() {
 
     const data = await read_data();
 
-    if(screen.width > screen.height) {
+    /*if(screen.width > screen.height) {
         style.setAttribute("href", "assets/css/PC.css");
         console.log('PC')
     }else{
         style.setAttribute("href", "assets/css/Mobile.css");
         console.log('Mobile')
-    }
+    }*/
 
     if(data['registro']){
         document.querySelector('#zero').classList.remove('active');
