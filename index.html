@@ -101,16 +101,20 @@
         <div id="bg1" class="container">
 
             <div class="divisor-1">
-                
-                <img src="assets/img/1.png" alt="frame">
-                <img src="assets/img/3.png" alt="frame">
-
+                <div>
+                    <img src="assets/img/1.png" alt="frame" style="align-self: flex-start;">
+                </div>
+                <div>
+                    <img src="assets/img/2.png" alt="frame" style="align-self: flex-start;">
+                </div>
             </div>
             <div class="divisor-1">
-
-                <img src="assets/img/2.png" alt="frame">
-                <img src="assets/img/4.png" alt="frame">
-
+                <div>
+                    <img src="assets/img/3.png" alt="frame" style="align-self: flex-end;">
+                </div>
+                <div>
+                    <img src="assets/img/4.png" alt="frame" style="align-self: flex-end;">
+                </div>
             </div>
 
         </div>
@@ -122,7 +126,7 @@
         </div>
 
         <div class="container2">
-            <div id="zero" class="subcontainer hidden">
+            <div id="zero" class="subcontainer active">
                 <p id="title">¡Nos casamos!</p>
                 <p id="subtitle">- Hiram & Angelica -</p>
                 <p id="text">Para nosotros es fundamental compartir la alegria de nuestro matrimonio con ustedes, por eso nos gustaria que nos acompañen el:</p>
@@ -136,7 +140,7 @@
             <div id="one" class="subcontainer hidden">
                 <p id="title">Ceremonia</p>
                 <p id="subtitle">6:00 pm</p>
-                <p id="text">Parroquia todos los santos, Calle Alameda Norte 235, Fraccionamiento Alamedas, Cd. Juarez, Chihuahua.</p>
+                <p id="text">Parroquia todos los santos<br>Calle Alameda Norte 235, Fraccionamiento Alamedas<br>Cd. Juarez, Chihuahua.</p>
                 <div>
                     <button class="b" id="b2" onclick="state(0)">Atras</button>
                     <button class="b" id="b3" onclick="state(2)">Continuar</button>
@@ -145,7 +149,7 @@
             <div id="two" class="subcontainer hidden">
                 <p id="title">Recepcion</p>
                 <p id="subtitle">9:00 pm</p>
-                <p id="text">Salón de eventos 'La Casona', Calle Teofilo Borunda 9171, Misión De Los Lagos 32030 Cd. Juarez, Chihuahua.</p>
+                <p id="text">Salón de eventos 'La Casona'<br>Calle Teofilo Borunda 9171, Misión De Los Lagos 32030<br>Cd. Juarez, Chihuahua.</p>
                 <div>
                     <button class="b" id="b4" onclick="state(1)">Atras</button>
                     <button class="b" id="b5" onclick="state(3)">Continuar</button>
@@ -166,9 +170,9 @@
             <div id="four" class="subcontainer hidden">
                 <p id="title" class="selector pases">¡Tienes X pases!</p>
                 <p id="subtitle">¿Cuantos asistiran?</p>
-                <p id="text">1 pase = 1 persona</p>
+                <p id="text" style="border-radius: 10px;background: rgba(64,255,62,0.2);padding:15px;">1 pase = 1 persona<br>Ten en cuenta que uno de los pases es para ti mismo.</p>
                 <form id="form" onkeypress="return null">
-                    <input id="input" type="number" maxlength="1" placeholder="Asistentes">
+                    <input id="input" type="number" maxlength="1" minlength="1" placeholder="Asistentes">
                 </form>
                 <div>
                     <button class="b" id="b8" onclick="state(3)">Atras</button>
@@ -180,8 +184,8 @@
                     <img src="assets/img/invitacion2.png">
                 
                 <div>
-                    <button class="b" id="b10" onclick="confirmacion('No')">No</button>
-                    <button class="b" id="b11" onclick="confirmacion('Si')">Si</button>
+                    <button class="b" id="b10" onclick="confirmacion('No')">No iremos</button>
+                    <button class="b" id="b11" onclick="confirmacion('Si')">Asistiremos</button>
                 </div>
                 <div style="margin-top: 15px;">
                     <button class="b" id="b12" onclick="back()">Atras</button>
@@ -203,6 +207,5 @@
                 </div>
             </div>
         </div>
-        <script>reload_content()</script>
     </body>
 </html>

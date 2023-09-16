@@ -1,63 +1,96 @@
+const buttons = [
+    ['state(1)','state(10)','state(0)','state(2)','state(1)','state(3)','state(2)','state(4)','state(3)','verify()','confirmacion("No")','confirmacion("Si")','back()','download(0)','download(1)','state(0)'],
+    ['state(1)','state(10)','state(0)','state(2)','state(1)','state(3)','state(2)','skip_pass()','state(3)','verify()','confirmacion("No")','confirmacion("Si")','back()','download(0)','download(1)','state(0)']
+];
+
 function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function reload_content() {
+async function read_data(){
 
-        const 
+    await sleep(1000);
+
+    const 
             url_values = window.location.search,
             url_params = new URLSearchParams(url_values),
-            style = document.querySelector("#style");
+            NAME = url_params.get("NAME");
 
-        let 
-            NAME = url_params.get("NAME"),
-            response,
-            data;
+    let 
+        response,
+        data;
 
-        if(screen.width > screen.height) {
-            style.setAttribute("href", "assets/css/PC.css");
-            console.log('PC')
-        }else{
-            style.setAttribute("href", "assets/css/Mobile.css");
-            console.log('Mobile')
-        }
-
+    try{
         response = await fetch("assets/jscode/pass.json");
+        console.log(response.status);
+        data = await response.json();
+        data = data['invitados'][NAME];
+    }catch(e){
+        console.error(e);
+        console.log(response.status);
+    }
 
-        if(response.status === 200) {
-            data = await response.json();
-            console.log("invitados: 200");
-            console.log(data['invitados'][NAME]);
-        }else{
-            console.log("invitados: 404");
-        }
+    return data;
 
-        if(data['invitados'][NAME]['registro']){
-            document.querySelector('#ten').classList.add('active');
-            document.querySelector('#ten').classList.remove('hidden');
-        }else{
-            document.querySelector('#zero').classList.add('active');
-            document.querySelector('#zero').classList.remove('hidden');
-        }
+}
 
+async function render_content() {
 
-        document.querySelector(".selector").innerHTML = ("¡Tienes " + data['invitados'][NAME]['pases'] + " pases!");
-        document.querySelector("#input").setAttribute("maxlength", data['invitados'][NAME]['pases']);
+    const data = await read_data();
 
-        verify();
+    if(screen.width > screen.height) {
+        style.setAttribute("href", "assets/css/PC.css");
+        console.log('PC')
+    }else{
+        style.setAttribute("href", "assets/css/Mobile.css");
+        console.log('Mobile')
+    }
+
+    if(data['registro']){
+        document.querySelector('#zero').classList.remove('active');
+        document.querySelector('#zero').classList.add('hidden');
+        document.querySelector('#ten').classList.remove('hidden');
+        document.querySelector('#ten').classList.add('active');
+    }
+
+    if(data['pases'] <= 1){
+        document.querySelector('#b0').innerHTML = 'Asistire';
+        document.querySelector('#b1').innerHTML = 'No podre'
+        document.querySelector('#b10').innerHTML = 'No ire';
+        document.querySelector('#b11').innerHTML = 'Asistire';
+    }
+
+    document.querySelector(".selector").innerHTML = ("¡Tienes " + data['pases'] + " pases!");
+    document.querySelector("#input").setAttribute("maxlength", data['pases']);
+
+    verify();
 
 }
 
 function disableMenu(){
     str = ["#b",""];
-    for(let i = 0; i < 11; i++){
+    for(let i = 0; i < 16; i++){
         str[1] = str[0].concat(i.toString());
+        document.querySelector(str[1]).style.backgroundColor = 'grey';
         document.querySelector(str[1]).removeAttribute("onclick");
     }
 }
 
-function enableMenu(){
-    document.querySelector("#b0").setAttribute("onclick", "state(1)");
+async function enableMenu(){
+
+    str = ["#b",""];
+    data = await read_data();
+    for(let i = 0; i < 16; i++){
+        str[1] = str[0].concat(i.toString());
+        if(data['pases'] > 1){
+            document.querySelector(str[1]).setAttribute("onclick", buttons[0][i]);
+        }else{
+            document.querySelector(str[1]).setAttribute("onclick", buttons[1][i]);
+        }
+        document.querySelector(str[1]).style.backgroundColor = '#14b4cc';
+    }
+
+    /*document.querySelector("#b0").setAttribute("onclick", "state(1)");
     document.querySelector("#b1").setAttribute("onclick", "state(10)");
     document.querySelector("#b2").setAttribute("onclick", "state(0)");
     document.querySelector("#b3").setAttribute("onclick", "state(2)");
@@ -72,7 +105,7 @@ function enableMenu(){
     document.querySelector("#b12").setAttribute("onclick", "back()");
     document.querySelector("#b13").setAttribute("onclick", "download(0)");
     document.querySelector("#b14").setAttribute("onclick", "download(1)");
-    document.querySelector("#b15").setAttribute("onclick", "state(0)");
+    document.querySelector("#b15").setAttribute("onclick", "state(0)");*/
 }
 
 async function state(id){
@@ -116,14 +149,9 @@ async function state(id){
 
     document.querySelector(state).style.animation = "in 1s";
     document.querySelector(state).setAttribute("class",   "subcontainer active");
-    enableMenu();
     await sleep(950);
+    enableMenu();
     document.querySelector(state).removeAttribute("style");
-}
-
-function msg(){
-    let url = 'whatsapp://send?text="Hola"&phone="+encodeURIComponent(+526564425349)'
-    window.open(url);
 }
 
 async function send(value, confirmacion){
@@ -172,45 +200,38 @@ async function changeBG(type){
 
 async function verify(){
 
-    const 
-        url_values = window.location.search,
-        url_params = new URLSearchParams(url_values);
-
-    let 
-        NAME = url_params.get("NAME"),
-        response,
-        data;
-    
-    response = await fetch("assets/jscode/pass.json");
-
-    if(response.status === 200) {
-        data = await response.json();
-        console.log("invitados: 200");
-        console.log(data['invitados'][NAME]);
-    }else{
-        console.log("invitados: 404");
-    }
+    const data = await read_data();
 
     if(document.querySelector('#four').classList.contains('active')){
-        if(document.querySelector('#input').value <= data['invitados'][NAME]['pases'] && document.querySelector('#input').value > 0){
+        if(document.querySelector('#input').value <= data['pases'] && document.querySelector('#input').value > 0){
             state(9)
             changeBG(0);
-            //send(NAME, document.querySelector('#input').value);
             console.log("200");
-        }else if(document.querySelector('#input').value > data['invitados'][NAME]['pases']){
+        }else if(document.querySelector('#input').value > data['pases']){
             console.log("TOO MUCH PEOPLE");
-            alert("Lo siento no disponen de tantos pases");
-        }else if(document.querySelector('#input').value <= 0 || document.querySelector('#input').value === NULL){
+            alert("Lo siento no disponen de tantos pases\nTen en cuenta que uno de los pases es para ti mismo.");
+        }else if(document.querySelector('#input').value < 1 || document.querySelector('#input').value === NULL){
             console.log("NULL");
-            alert("Antes de continuar debes confirmar cuantas personas asistiran");
+            alert("Antes de continuar debes confirmar cuantas personas asistiran\nTen en cuenta que uno de los pases es para ti mismo.");
         }
     }
 
 }
 
-function back(){
-    state(4);
+async function back(){
+    data = await read_data();
+
+    if(data['pases'] > 1){
+        state(4);
+    }else{
+        state(3);
+    }
     changeBG(1);
+}
+
+function skip_pass(){
+    state(9);
+    changeBG(0);
 }
 
 function confirmacion(response){
@@ -240,5 +261,5 @@ function download(type){
     a.click();
 }
 
-reload_content();
+render_content();
 
