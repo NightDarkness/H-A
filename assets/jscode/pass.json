@@ -363,7 +363,7 @@
         "Fam. Morales Bencomo": {
             "id": 60,
             "registro": false,
-            "pases": undefined,
+            "pases": 1000,
             "cena": false
         },
         "Fam. Molina Ramos": {
