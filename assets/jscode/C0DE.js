@@ -144,16 +144,12 @@ async function send(value, response1, response2){
 
     console.log(mail);
 
-    /*
-
     emailjs.send('default_service', 'template_wrtytgg', mail, 'aoHKedVynHDdrywaD')
     .then(function(response) {
        console.log('SUCCESS!', response.status, response.text);
     }, function(error) {
        console.log('FAILED...', error);
     });
-
-    */
 }
 
 async function changeBG(type){
