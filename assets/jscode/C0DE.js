@@ -1,6 +1,6 @@
 const buttons = [
-    ['state(1)','state(10)','state(0)','state(2)','state(1)','state(3)','state(2)','state(4)','state(3)','state(3)','confirmacion("Si", "No")','confirmacion("Si", "Si")','back()','download(0)','download(1)','state(0)'],
-    ['state(1)','state(11)','state(0)','state(2)','state(1)','state(3)','state(2)','skip_pass()','state(3)','state(3)','confirmacion("Si", "No")','confirmacion("Si", "Si")','back()','download(0)','download(1)','state(0)']
+    ['state(1)','state(10)','state(0)','state(2)','state(1)','state(3)','state(2)','state(4)','state(3)','verify()','confirmacion("Si", "No")','confirmacion("Si", "Si")','back()','download(0)','download(1)','state(0)'],
+    ['state(1)','state(11)','state(0)','state(2)','state(1)','state(3)','state(2)','skip_pass()','state(3)','verify()','confirmacion("Si", "No")','confirmacion("Si", "Si")','back()','download(0)','download(1)','state(0)']
 ];
 
 function sleep(ms) {
@@ -37,7 +37,6 @@ async function read_data(){
 async function render_content() {
 
     const data = await read_data();
-    console.log('read 1');
 
     if(data['registro']){
         document.querySelector('#zero').classList.remove('active');
@@ -68,7 +67,6 @@ function disableMenu(){
 }
 
 async function enableMenu(){
-
     str = ["#b",""];
     data = await read_data();
     for(let i = 0; i < 16; i++){
@@ -144,12 +142,18 @@ async function send(value, response1, response2){
         cena: response2
     };
 
+    console.log(mail);
+
+    /*
+
     emailjs.send('default_service', 'template_wrtytgg', mail, 'aoHKedVynHDdrywaD')
     .then(function(response) {
        console.log('SUCCESS!', response.status, response.text);
     }, function(error) {
        console.log('FAILED...', error);
     });
+
+    */
 }
 
 async function changeBG(type){
@@ -176,17 +180,11 @@ async function changeBG(type){
 async function verify(){
 
     const data = await read_data();
-    console.log('read 2');
-    console.log(data);
 
     if(document.querySelector('#four').classList.contains('active')){
         if(document.querySelector('#input').value <= data['pases'] && document.querySelector('#input').value > 0){
 
-            console.log(data['cena']);
-            
-            console.log("HOLAAAAAAAAAAAA");
-
-            if(data['cena'] === false){
+            if(data['cena']){
                 state(9)
                 changeBG(0);
             }else{
@@ -206,7 +204,6 @@ async function verify(){
 
 async function back(){
     const data = await read_data();
-    console.log('read 3');
 
     if(data['pases'] > 1){
         state(4);
@@ -216,9 +213,18 @@ async function back(){
     changeBG(1);
 }
 
-function skip_pass(){
-    state(9);
-    changeBG(0);
+async function skip_pass(){
+
+    data = await read_data();
+
+    if(data['cena']){
+        state(9)
+        changeBG(0);
+    }else{
+        console.log('NO APLICA CENA');
+        confirmacion('Si', 'NO APLICA');
+    }
+
 }
 
 function confirmacion(response1, response2){
