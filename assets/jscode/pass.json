@@ -576,22 +576,22 @@
             "pases": 2,
             "cena": false
         },
-        "temp1": {
+        "Fam. Zepeda Piedra": {
             "id": 96,
             "registro": false,
-            "pases": 1,
+            "pases": 3,
             "cena": false
         },
-        "temp2": {
+        "Fam. Cuellar Piedra": {
             "id": 97,
             "registro": false,
-            "pases": 1,
+            "pases": 3,
             "cena": false
         },
-        "temp3": {
+        "Fam Piedra Espino": {
             "id": 98,
             "registro": false,
-            "pases": 1,
+            "pases": 3,
             "cena": false
         }
     }
