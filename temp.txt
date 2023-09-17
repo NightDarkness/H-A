@@ -25,7 +25,7 @@
 
     </head>
     <body>
-        <!--<script type="text/javascript">
+        <script type="text/javascript">
             if(screen.width > screen.height) {
                 style.setAttribute("href", "assets/css/PC.css");
                 console.log('PC')
@@ -33,7 +33,7 @@
                 style.setAttribute("href", "assets/css/Mobile.css");
                 console.log('Mobile')
             }
-        </script> -->
+        </script>
         <script src="assets/jscode/C0DE.js" type="text/javascript"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
         <script type="text/javascript">
@@ -86,19 +86,19 @@
         <div class="container2">
             <div id="zero" class="subcontainer active">
                 <p id="title">¡Nos casamos!</p>
-                <p id="subtitle">- Nombres -</p>
+                <p id="subtitle">- Hiram & Angélica -</p>
                 <p id="text">Para nosotros es fundamental compartir la alegría de nuestro matrimonio con ustedes, por eso nos gustaría que nos acompañen él:</p>
-                <p id="day">DIA</p>
-                <p id="date">FECHA</p>
+                <p id="day">SÁBADO</p>
+                <p id="date">4 | Noviembre | 2023</p>
                 <div>
                     <button class="b" id="b0" onclick="state(1)">Asistiremos</button>
-                    <button class="b" id="b1" onclick="state(11)">No podremos</button>
+                    <button class="b" id="b1" onclick="state(10)">No podremos</button>
                 </div>
             </div>
             <div id="one" class="subcontainer hidden">
                 <p id="title">Ceremonia</p>
-                <p id="subtitle">HORA</p>
-                <p id="text">LUGAR<br>CALLE<br>LOCALIDAD</p>
+                <p id="subtitle">6:00 pm</p>
+                <p id="text">Parroquia Todos los santos<br>Calle Alameda Norte 235, Fraccionamiento Alamedas<br>CD. Juárez, Chihuahua.</p>
                 <div>
                     <button class="b" id="b2" onclick="state(0)">Atras</button>
                     <button class="b" id="b3" onclick="state(2)">Continuar</button>
@@ -106,8 +106,8 @@
             </div>
             <div id="two" class="subcontainer hidden">
                 <p id="title">Recepcion</p>
-                <p id="subtitle">HORA</p>
-                <p id="text">LUGAR<br>CALLE<br>LOCALIDAD</p>
+                <p id="subtitle">9:00 pm</p>
+                <p id="text">Salón de eventos 'La Casona'<br>Calle Teófilo Borunda 9171, Misión De Los Lagos 32030<br>CD. Juárez, Chihuahua.</p>
                 <div>
                     <button class="b" id="b4" onclick="state(1)">Atras</button>
                     <button class="b" id="b5" onclick="state(3)">Continuar</button>
@@ -129,7 +129,7 @@
                 <p id="subtitle">¿Cuántos asistirán?</p>
                 <p id="text" style="border-radius: 10px;background: rgba(64,255,62,0.2);padding:15px;">1 pase = 1 persona<br>Ten en cuenta que uno de los pases es para ti mismo.</p>
                 <form id="form" onkeypress="return null">
-                    <input id="input" type="number" maxlength="1" minlength="1" placeholder="Asistentes" value="0">
+                    <input id="input" type="number" maxlength="1" minlength="1" placeholder="Asistentes">
                 </form>
                 <div>
                     <button class="b" id="b8" onclick="state(3)">Atras</button>
@@ -141,8 +141,8 @@
                     <img src="https://i.ibb.co/C6VrQh4/invitacion2.png">
                 
                 <div>
-                    <button class="b" id="b10" onclick="confirmacion('Si', 'No')">No iremos</button>
-                    <button class="b" id="b11" onclick="confirmacion('Si', 'Si')">Asistiremos</button>
+                    <button class="b" id="b10" onclick="confirmacion('No')">No iremos</button>
+                    <button class="b" id="b11" onclick="confirmacion('Si')">Asistiremos</button>
                 </div>
                 <div style="margin-top: 15px;">
                     <button class="b" id="b12" onclick="back()">Atras</button>
@@ -152,8 +152,8 @@
                 <p id="title">¡Los esperamos!</p>
                 <p id="text"> Descargar invitaciones</p>
                 <div>
-                    <button class="b" id="b13" onclick="download()">Recepcion</button>
-                    <button class="b" id="b14" onclick="download()">Cena</button>
+                    <button class="b" id="b13" onclick="download(0)">Recepcion</button>
+                    <button class="b" id="b14" onclick="download(1)">Cena</button>
                 </div>
             </div>
             <div id="eleven" class="subcontainer hidden">

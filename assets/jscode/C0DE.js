@@ -1,6 +1,6 @@
 const buttons = [
-    ['state(1)','state(10)','state(0)','state(2)','state(1)','state(3)','state(2)','state(4)','state(3)','verify()','confirmacion("No")','confirmacion("Si")','back()','download(0)','download(1)','state(0)'],
-    ['state(1)','state(10)','state(0)','state(2)','state(1)','state(3)','state(2)','skip_pass()','state(3)','verify()','confirmacion("No")','confirmacion("Si")','back()','download(0)','download(1)','state(0)']
+    ['state(1)','state(10)','state(0)','state(2)','state(1)','state(3)','state(2)','state(4)','state(3)','state(3)','confirmacion("Si", "No")','confirmacion("Si", "Si")','back()','download(0)','download(1)','state(0)'],
+    ['state(1)','state(11)','state(0)','state(2)','state(1)','state(3)','state(2)','skip_pass()','state(3)','state(3)','confirmacion("Si", "No")','confirmacion("Si", "Si")','back()','download(0)','download(1)','state(0)']
 ];
 
 function sleep(ms) {
@@ -37,14 +37,7 @@ async function read_data(){
 async function render_content() {
 
     const data = await read_data();
-
-    /*if(screen.width > screen.height) {
-        style.setAttribute("href", "assets/css/PC.css");
-        console.log('PC')
-    }else{
-        style.setAttribute("href", "assets/css/Mobile.css");
-        console.log('Mobile')
-    }*/
+    console.log('read 1');
 
     if(data['registro']){
         document.querySelector('#zero').classList.remove('active');
@@ -62,8 +55,6 @@ async function render_content() {
 
     document.querySelector(".selector").innerHTML = ("¡Tienes " + data['pases'] + " pases!");
     document.querySelector("#input").setAttribute("maxlength", data['pases']);
-
-    verify();
 
 }
 
@@ -89,23 +80,6 @@ async function enableMenu(){
         }
         document.querySelector(str[1]).style.backgroundColor = '#14b4cc';
     }
-
-    /*document.querySelector("#b0").setAttribute("onclick", "state(1)");
-    document.querySelector("#b1").setAttribute("onclick", "state(10)");
-    document.querySelector("#b2").setAttribute("onclick", "state(0)");
-    document.querySelector("#b3").setAttribute("onclick", "state(2)");
-    document.querySelector("#b4").setAttribute("onclick", "state(1)");
-    document.querySelector("#b5").setAttribute("onclick", "state(3)");
-    document.querySelector("#b6").setAttribute("onclick", "state(2)");
-    document.querySelector("#b7").setAttribute("onclick", "state(4)");
-    document.querySelector("#b8").setAttribute("onclick", "state(3)");
-    document.querySelector("#b9").setAttribute("onclick", "verify()");
-    document.querySelector("#b10").setAttribute("onclick", "confirmacion('No')");
-    document.querySelector("#b11").setAttribute("onclick", "confirmacion('Si')");
-    document.querySelector("#b12").setAttribute("onclick", "back()");
-    document.querySelector("#b13").setAttribute("onclick", "download(0)");
-    document.querySelector("#b14").setAttribute("onclick", "download(1)");
-    document.querySelector("#b15").setAttribute("onclick", "state(0)");*/
 }
 
 async function state(id){
@@ -118,8 +92,6 @@ async function state(id){
     document.querySelector(".active").removeAttribute("style");
     document.querySelector(".active").setAttribute("class", "subcontainer hidden");
 
-    
-    //document.querySelector(".active").classList.remove("active");
 
     switch(id){
         case 0:
@@ -143,6 +115,9 @@ async function state(id){
         case 10:
             state = "#ten";
             break;
+        case 11:
+            state = "#eleven";
+            break;
         default:
             state = "#zero";
     }
@@ -154,7 +129,7 @@ async function state(id){
     document.querySelector(state).removeAttribute("style");
 }
 
-async function send(value, confirmacion){
+async function send(value, response1, response2){
 
     const 
         url_values = window.location.search,
@@ -163,10 +138,10 @@ async function send(value, confirmacion){
     let NAME = url_params.get("NAME");
 
     let mail = {
-        from_name: NAME,
-        message: 'Hola Hiram y Angelica, confirmo que asistire a la ceremonio y recepcion utilizando ' + value + ' pases y ' + confirmacion + ' asistire a la cena.',
+        inv: NAME,
         pases: value,
-        cena: confirmacion
+        confirm: response1,
+        cena: response2
     };
 
     emailjs.send('default_service', 'template_wrtytgg', mail, 'aoHKedVynHDdrywaD')
@@ -185,12 +160,12 @@ async function changeBG(type){
     await sleep(900);
     switch(type){
         case 0:
-            BG.style.background = 'url(assets/img/restaurante.png)';
+            BG.style.background = 'url("https://i.ibb.co/714LMZB/restaurante.png")';
             document.querySelector('#bg1').classList.add('hidden');
             document.querySelector('#bg2').classList.remove('hidden');
             break;
         case 1:
-            BG.style.background = 'url(assets/img/jardin.png)';
+            BG.style.background = 'url("https://i.ibb.co/fYBftqv/jardin.png")';
             document.querySelector('#bg2').classList.add('hidden');
             document.querySelector('#bg1').classList.remove('hidden');
             break;
@@ -201,12 +176,23 @@ async function changeBG(type){
 async function verify(){
 
     const data = await read_data();
+    console.log('read 2');
+    console.log(data);
 
     if(document.querySelector('#four').classList.contains('active')){
         if(document.querySelector('#input').value <= data['pases'] && document.querySelector('#input').value > 0){
-            state(9)
-            changeBG(0);
-            console.log("200");
+
+            console.log(data['cena']);
+            
+            console.log("HOLAAAAAAAAAAAA");
+
+            if(data['cena'] === false){
+                state(9)
+                changeBG(0);
+            }else{
+                console.log('NO APLICA CENA');
+                confirmacion('Si', 'NO APLICA');
+            }
         }else if(document.querySelector('#input').value > data['pases']){
             console.log("TOO MUCH PEOPLE");
             alert("Lo siento no disponen de tantos pases\nTen en cuenta que uno de los pases es para ti mismo.");
@@ -219,7 +205,8 @@ async function verify(){
 }
 
 async function back(){
-    data = await read_data();
+    const data = await read_data();
+    console.log('read 3');
 
     if(data['pases'] > 1){
         state(4);
@@ -234,8 +221,9 @@ function skip_pass(){
     changeBG(0);
 }
 
-function confirmacion(response){
-    send(document.querySelector('#input').value, response);
+function confirmacion(response1, response2){
+
+    send(document.querySelector('#input').value, response1, response2);
     state(10);
 }
 
@@ -245,10 +233,10 @@ function download(type){
 
     switch(type){
         case 0:
-            source = 'assets/img/inv.png';
+            source = 'https://i.ibb.co/3WJHM4q/inv.png';
             break;
         case 1:
-            source = 'assets/img/inv2.png';
+            source = 'https://i.ibb.co/6RF4y69/inv2.png';
             break;
     }
 
@@ -259,6 +247,14 @@ function download(type){
     a.href= source;
 
     a.click();
+}
+
+if(screen.width > screen.height) {
+    style.setAttribute("href", "assets/css/PC.css");
+    console.log('PC')
+}else{
+    style.setAttribute("href", "assets/css/Mobile.css");
+    console.log('Mobile')
 }
 
 render_content();

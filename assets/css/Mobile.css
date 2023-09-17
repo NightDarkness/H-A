@@ -30,7 +30,7 @@ body{
 }
 
 .blur{
-    background: #14b4cc url("../img/jardin.png") no-repeat;
+    background: #14b4cc url("https://i.ibb.co/fYBftqv/jardin.png") no-repeat;
     background-size:100% 100%;
     filter: blur(8px);
     position: absolute;
