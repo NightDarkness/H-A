@@ -44,7 +44,7 @@ async function render_content() {
             debug = url_params.get("debug");
 
     if(debug){
-        alert(data);
+        console.log(data);
     }
 
     if(data['registro']){
@@ -161,7 +161,7 @@ async function send(value, response1, response2){
     
     if(debug){
 
-        alert(mail);
+        console.log(mail);
 
     }else{
         emailjs.send('default_service', 'template_wrtytgg', mail, 'aoHKedVynHDdrywaD').then(function(response) {
