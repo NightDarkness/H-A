@@ -16,25 +16,25 @@
             "id": 2,
             "registro": false,
             "pases": 4,
-            "cena": false
+            "cena": true
         },
         "Fam. De León Piedra": {
             "id": 3,
             "registro": false,
             "pases": 4,
-            "cena": false
+            "cena": true
         },
         "Graciela Piedra Alvarado": {
             "id": 4,
             "registro": false,
             "pases": 2,
-            "cena": false
+            "cena": true
         },
         "Gisela Piedra Alvarado": {
             "id": 5,
             "registro": false,
             "pases": 2,
-            "cena": false
+            "cena": true
         },
         "Ileana Martínez": {
             "id": 6,
@@ -48,7 +48,7 @@
             "pases": 2,
             "cena": false
         },
-        "Karla Morales ": {
+        "Karla Morales": {
             "id": 8,
             "registro": false,
             "pases": 2,
@@ -88,7 +88,7 @@
             "id": 14,
             "registro": false,
             "pases": 3,
-            "cena": false
+            "cena": true
         },
         "Fam. Pólito Alonso": {
             "id": 15,
@@ -102,7 +102,7 @@
             "pases": 2,
             "cena": false
         },
-        "Yesenia Ramos ": {
+        "Yesenia Ramos": {
             "id": 17,
             "registro": false,
             "pases": 2,
@@ -148,7 +148,7 @@
             "id": 24,
             "registro": false,
             "pases": 1,
-            "cena": false
+            "cena": true
         },
         "Bertha Vargas": {
             "id": 25,
@@ -172,7 +172,7 @@
             "id": 28,
             "registro": false,
             "pases": 2,
-            "cena": false
+            "cena": true
         },
         "Fam. Galindo Carbajal": {
             "id": 29,
@@ -184,13 +184,13 @@
             "id": 30,
             "registro": false,
             "pases": 2,
-            "cena": false
+            "cena": true
         },
         "Fam. Piedra González": {
             "id": 31,
             "registro": false,
             "pases": 5,
-            "cena": false
+            "cena": true
         },
         "Roberto Arciniega": {
             "id": 32,
@@ -214,19 +214,19 @@
             "id": 35,
             "registro": false,
             "pases": 5,
-            "cena": false
+            "cena": true
         },
         "Lourdes Piedra Sandoval": {
             "id": 36,
             "registro": false,
             "pases": 2,
-            "cena": false
+            "cena": true
         },
         "Matha Piedra Sandoval": {
             "id": 37,
             "registro": false,
             "pases": 2,
-            "cena": false
+            "cena": true
         },
         "Fam. Madrid Corona": {
             "id": 38,
@@ -238,19 +238,19 @@
             "id": 39,
             "registro": false,
             "pases": 6,
-            "cena": false
+            "cena": true
         },
         "Fam. Piedra Rubio": {
             "id": 40,
             "registro": false,
             "pases": 2,
-            "cena": false
+            "cena": true
         },
         "Alfonso Piedra": {
             "id": 41,
             "registro": false,
             "pases": 1,
-            "cena": false
+            "cena": true
         },
         "Fam. Ramos Piedra": {
             "id": 42,
@@ -268,7 +268,7 @@
             "id": 44,
             "registro": false,
             "pases": 3,
-            "cena": false
+            "cena": true
         },
         "Mari Tovar y Fam.": {
             "id": 45,
@@ -298,67 +298,67 @@
             "id": 49,
             "registro": false,
             "pases": 2,
-            "cena": false
+            "cena": true
         },
         "Socorro Piedra Sandoval": {
             "id": 50,
             "registro": false,
             "pases": 2,
-            "cena": false
+            "cena": true
         },
-        "Veronica Piedra Sandoval ": {
+        "Veronica Piedra Sandoval": {
             "id": 51,
             "registro": false,
             "pases": 4,
-            "cena": false
+            "cena": true
         },
         "Fam. Muñoz Ramos": {
             "id": 52,
             "registro": false,
             "pases": 2,
-            "cena": false
+            "cena": true
         },
-        "Fam. Varela Morales ": {
+        "Fam. Varela Morales": {
             "id": 53,
             "registro": false,
             "pases": 3,
-            "cena": false
+            "cena": true
         },
         "Fam. Morales Sáenz": {
             "id": 54,
             "registro": false,
             "pases": 4,
-            "cena": false
+            "cena": true
         },
         "Fam. Olivas Morales": {
             "id": 55,
             "registro": false,
             "pases": 4,
-            "cena": false
+            "cena": true
         },
         "Juan Nieto": {
             "id": 56,
             "registro": false,
             "pases": 2,
-            "cena": false
+            "cena": true
         },
         "Fam. Hernández Gándara": {
             "id": 57,
             "registro": false,
             "pases": 5,
-            "cena": false
+            "cena": true
         },
         "Guerrero Ramos": {
             "id": 58,
             "registro": false,
             "pases": 2,
-            "cena": false
+            "cena": true
         },
         "Fam. Zambrano Morales": {
             "id": 59,
             "registro": false,
             "pases": 1,
-            "cena": false
+            "cena": true
         },
         "Fam. Morales Bencomo": {
             "id": 60,
@@ -370,31 +370,31 @@
             "id": 61,
             "registro": false,
             "pases": 3,
-            "cena": false
+            "cena": true
         },
         "Fam. Urtuzuástegui Ramos": {
             "id": 62,
             "registro": false,
             "pases": 3,
-            "cena": false
+            "cena": true
         },
         "Francisco Campos": {
             "id": 63,
             "registro": false,
             "pases": 2,
-            "cena": false
+            "cena": true
         },
         "Guillermo Sánchez": {
             "id": 64,
             "registro": false,
             "pases": 2,
-            "cena": false
+            "cena": true
         },
         "Emma Corona": {
             "id": 65,
             "registro": false,
             "pases": 3,
-            "cena": false
+            "cena": true
         },
         "Marisú Padilla": {
             "id": 66,
@@ -448,19 +448,19 @@
             "id": 74,
             "registro": false,
             "pases": 2,
-            "cena": false
+            "cena": true
         },
         "Evelyn Ontiveros": {
             "id": 75,
             "registro": false,
             "pases": 2,
-            "cena": false
+            "cena": true
         },
         "Fam. Morales González": {
             "id": 76,
             "registro": false,
             "pases": 5,
-            "cena": false
+            "cena": true
         },
         "Paty Aguilera": {
             "id": 77,
@@ -472,79 +472,79 @@
             "id": 78,
             "registro": false,
             "pases": 4,
-            "cena": false
+            "cena": true
         },
         "Gil Morales y esposa": {
             "id": 79,
             "registro": false,
             "pases": 2,
-            "cena": false
+            "cena": true
         },
         "Sandra Ramos": {
             "id": 80,
             "registro": false,
             "pases": 1,
-            "cena": false
+            "cena": true
         },
         "Lupe Ontiveros Morales": {
             "id": 81,
             "registro": false,
             "pases": 2,
-            "cena": false
+            "cena": true
         },
         "Fam. Arvizo Morales": {
             "id": 82,
             "registro": false,
             "pases": 4,
-            "cena": false
+            "cena": true
         },
         "Fam. Robles Morales": {
             "id": 83,
             "registro": false,
             "pases": 7,
-            "cena": false
+            "cena": true
         },
         "Saúl Morales Gonzélez y fam.": {
             "id": 84,
             "registro": false,
             "pases": 5,
-            "cena": false
+            "cena": true
         },
         "Martín Morales González y fam": {
             "id": 85,
             "registro": false,
             "pases": 2,
-            "cena": false
+            "cena": true
         },
         "Rogelio Morales González y fam": {
             "id": 86,
             "registro": false,
             "pases": 2,
-            "cena": false
+            "cena": true
         },
         "Eduardo Morales González y fam": {
             "id": 87,
             "registro": false,
             "pases": 2,
-            "cena": false
+            "cena": true
         },
         "Fam. Vega Morales": {
             "id": 88,
             "registro": false,
             "pases": 2,
-            "cena": false
+            "cena": true
         },
         "Fam. Delgado Márquez": {
             "id": 89,
             "registro": false,
             "pases": 2,
-            "cena": false
+            "cena": true
         },
         "Luis Morales Delgado y fam.": {
             "id": 90,
             "registro": false,
             "pases": 3,
-            "cena": false
+            "cena": true
         },
         "Martín Garduño y fam.": {
             "id": 91,
@@ -562,7 +562,7 @@
             "id": 93,
             "registro": false,
             "pases": 2,
-            "cena": false
+            "cena": true
         },
         "Gabriela Piedra Rubio y fam": {
             "id": 94,
@@ -591,13 +591,13 @@
         "Fam Piedra Espino": {
             "id": 98,
             "registro": false,
-            "pases": 3,
+            "pases": 2,
             "cena": false
         },
         "Fam. Morales Vargas": {
             "id": 99,
             "registro": false,
-            "pases": 3,
+            "pases": 6,
             "cena": true
         }
     }

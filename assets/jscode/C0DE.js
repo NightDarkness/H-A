@@ -38,6 +38,15 @@ async function render_content() {
 
     const data = await read_data();
 
+    const 
+            url_values = window.location.search,
+            url_params = new URLSearchParams(url_values),
+            debug = url_params.get("debug");
+
+    if(debug){
+        alert(data);
+    }
+
     if(data['registro']){
         document.querySelector('#zero').classList.remove('active');
         document.querySelector('#zero').classList.add('hidden');
@@ -50,6 +59,7 @@ async function render_content() {
         document.querySelector('#b1').innerHTML = 'No podré'
         document.querySelector('#b10').innerHTML = 'No iré';
         document.querySelector('#b11').innerHTML = 'Asistiré';
+        document.querySelector('#input').value = 1;
     }
 
     if(data['cena']){
@@ -137,7 +147,9 @@ async function send(value, response1, response2){
         url_values = window.location.search,
         url_params = new URLSearchParams(url_values);
 
-    let NAME = url_params.get("NAME");
+    let 
+        NAME = url_params.get("NAME"),
+        debug = url_params.get("debug");
 
     let mail = {
         inv: NAME,
@@ -146,14 +158,18 @@ async function send(value, response1, response2){
         cena: response2
     };
 
-    console.log(mail);
+    
+    if(debug){
 
-    emailjs.send('default_service', 'template_wrtytgg', mail, 'aoHKedVynHDdrywaD')
-    .then(function(response) {
-       console.log('SUCCESS!', response.status, response.text);
-    }, function(error) {
-       console.log('FAILED...', error);
-    });
+        alert(mail);
+
+    }else{
+        emailjs.send('default_service', 'template_wrtytgg', mail, 'aoHKedVynHDdrywaD').then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+        }, function(error) {
+            console.log('FAILED...', error);
+        });
+    }
 }
 
 async function changeBG(type){
