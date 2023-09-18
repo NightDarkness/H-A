@@ -593,6 +593,12 @@
             "registro": false,
             "pases": 3,
             "cena": false
+        },
+        "Fam. Morales Vargas": {
+            "id": 99,
+            "registro": false,
+            "pases": 3,
+            "cena": true
         }
     }
 }

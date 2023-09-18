@@ -52,6 +52,10 @@ async function render_content() {
         document.querySelector('#b11').innerHTML = 'Asistiré';
     }
 
+    if(data['cena']){
+        document.querySelector('#b14').classList.remove('hidden');
+    }
+
     document.querySelector(".selector").innerHTML = ("¡Tienes " + data['pases'] + " pases!");
     document.querySelector("#input").setAttribute("maxlength", data['pases']);
 
