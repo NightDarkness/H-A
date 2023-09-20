@@ -82,6 +82,7 @@ body{
 .hidden{
     opacity:0;
     z-index: -20;
+    position: absolute;
 }
 
 .variable{

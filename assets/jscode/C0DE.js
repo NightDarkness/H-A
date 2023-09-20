@@ -85,7 +85,7 @@ async function render_content() {
 
 function disableMenu(){
     str = ["#b",""];
-    for(let i = 0; i < 16; i++){
+    for(let i = 0; i < 18; i++){
         str[1] = str[0].concat(i.toString());
         document.querySelector(str[1]).style.backgroundColor = 'grey';
         document.querySelector(str[1]).removeAttribute("onclick");
@@ -95,7 +95,7 @@ function disableMenu(){
 async function enableMenu(){
     str = ["#b",""];
     data = await read_data();
-    for(let i = 0; i < 16; i++){
+    for(let i = 0; i < 18; i++){
         str[1] = str[0].concat(i.toString());
         if(data['pases'] > 1){
             document.querySelector(str[1]).setAttribute("onclick", buttons[0][i]);
