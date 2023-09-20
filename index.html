@@ -112,6 +112,18 @@
                 </div>
             </div>
             <div id="four" class="subcontainer hidden">
+                <p id="title">Buzon de dinero</p>
+                <p id="subtitle" style="font-size:2vh;border-radius: 10px;background: rgba(15, 141, 214, 0.2);padding:15px;">No obligatorio.</p>
+                <p id="text">Agradecemos de todo corazon cualquier detalle que nos gusten realizar.</p>
+                <div class="images">
+                    <img src="https://i.ibb.co/sj06g1h/buzon.png">
+                </div>
+                <div>
+                    <button class="b" id="b8" onclick="state(3)">Atras</button>
+                    <button class="b" id="b9" onclick="state(5)">Continuar</button>
+                </div>
+            </div>
+            <div id="five" class="subcontainer hidden">
                 <p id="title" class="selector pases">¡Tienes X pases!</p>
                 <p id="subtitle">¿Cuántos asistirán?</p>
                 <p id="text" style="border-radius: 10px;background: rgba(64,255,62,0.2);padding:15px;">1 pase = 1 persona<br>Ten en cuenta que uno de los pases es para ti mismo.</p>
@@ -119,8 +131,8 @@
                     <input id="input" type="number" maxlength="1" minlength="1" placeholder="Asistentes" value="0">
                 </form>
                 <div>
-                    <button class="b" id="b8" onclick="state(3)">Atras</button>
-                    <button class="b" id="b9" onclick="verify()">Continuar</button>
+                    <button class="b" id="b10" onclick="state(4)">Atras</button>
+                    <button class="b" id="b11" onclick="verify()">Continuar</button>
                 </div>
             </div>
             <div id="nine" class="subcontainer hidden">
@@ -128,26 +140,26 @@
                     <img src="https://i.ibb.co/C6VrQh4/invitacion2.png">
                 
                 <div>
-                    <button class="b" id="b10" onclick="confirmacion('Si', 'No')">No iremos</button>
-                    <button class="b" id="b11" onclick="confirmacion('Si', 'Si')">Asistiremos</button>
+                    <button class="b" id="b12" onclick="confirmacion('Si', 'No')">No iremos</button>
+                    <button class="b" id="b13" onclick="confirmacion('Si', 'Si')">Asistiremos</button>
                 </div>
                 <div style="margin-top: 15px;">
-                    <button class="b" id="b12" onclick="back()">Atras</button>
+                    <button class="b" id="b14" onclick="back()">Atras</button>
                 </div>
             </div>
             <div id="ten" class="subcontainer hidden">
                 <p id="title">¡Los esperamos!</p>
                 <p id="text"> Descargar invitaciones</p>
                 <div>
-                    <button class="b" id="b13" onclick="download()">Recepcion</button>
-                    <button class="b hidden" id="b14" onclick="download()">Cena</button>
+                    <button class="b" id="b15" onclick="download()">Recepcion</button>
+                    <button class="b hidden" id="b16" onclick="download()">Cena</button>
                 </div>
             </div>
             <div id="eleven" class="subcontainer hidden">
                 <p id="title">¡Son importantes para nosotros!</p>
                 <p id="text">Siempre son bienvenidos, si cambian de opinión pueden tomar sus pases en el botón de abajo.</p>
                 <div>
-                    <button class="b" id="b15" onclick="state(0)">Cambie de opinión</button>
+                    <button class="b" id="b17" onclick="state(0)">Cambie de opinión</button>
                 </div>
             </div>
         </div>

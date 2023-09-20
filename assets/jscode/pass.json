@@ -580,19 +580,19 @@
             "id": 96,
             "registro": false,
             "pases": 3,
-            "cena": false
+            "cena": true
         },
         "Fam. Cuellar Piedra": {
             "id": 97,
             "registro": false,
             "pases": 3,
-            "cena": false
+            "cena": true
         },
         "Fam Piedra Espino": {
             "id": 98,
             "registro": false,
             "pases": 2,
-            "cena": false
+            "cena": true
         },
         "Fam. Morales Vargas": {
             "id": 99,

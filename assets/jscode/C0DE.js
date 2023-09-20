@@ -1,7 +1,19 @@
 const buttons = [
-    ['state(1)','state(10)','state(0)','state(2)','state(1)','state(3)','state(2)','state(4)','state(3)','verify()','confirmacion("Si", "No")','confirmacion("Si", "Si")','back()','download(0)','download(1)','state(0)'],
-    ['state(1)','state(11)','state(0)','state(2)','state(1)','state(3)','state(2)','skip_pass()','state(3)','verify()','confirmacion("Si", "No")','confirmacion("Si", "Si")','back()','download(0)','download(1)','state(0)']
+        ['state(1)','state(10)','state(0)','state(2)','state(1)','state(3)','state(2)','state(4)','state(3)','state(5)', 'state(4)', 'verify()','confirmacion("Si", "No")','confirmacion("Si", "Si")','back()','download(0)','download(1)','state(0)'],
+        ['state(1)','state(11)','state(0)','state(2)','state(1)','state(3)','state(2)','state(4)', 'state(3)', 'skip_pass()','state(4)','verify()','confirmacion("Si", "No")','confirmacion("Si", "Si")','back()','download(0)','download(1)','state(0)']
 ];
+
+let slide = {
+    0: '#zero',
+    1: '#one',
+    2: '#two',
+    3: '#three',
+    4: '#four',
+    5: '#five',
+    9: '#nine',
+    10: '#ten',
+    11: '#eleven'
+};
 
 function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
@@ -57,13 +69,13 @@ async function render_content() {
     if(data['pases'] <= 1){
         document.querySelector('#b0').innerHTML = 'Asistiré';
         document.querySelector('#b1').innerHTML = 'No podré'
-        document.querySelector('#b10').innerHTML = 'No iré';
-        document.querySelector('#b11').innerHTML = 'Asistiré';
+        document.querySelector('#b12').innerHTML = 'No iré';
+        document.querySelector('#b13').innerHTML = 'Asistiré';
         document.querySelector('#input').value = 1;
     }
 
     if(data['cena']){
-        document.querySelector('#b14').classList.remove('hidden');
+        document.querySelector('#b16').classList.remove('hidden');
     }
 
     document.querySelector(".selector").innerHTML = ("¡Tienes " + data['pases'] + " pases!");
@@ -96,49 +108,17 @@ async function enableMenu(){
 
 async function state(id){
 
-    let state = "zero";
-
     disableMenu();
     document.querySelector(".active").style.animation = "out 1s";
     await sleep(900);
     document.querySelector(".active").removeAttribute("style");
     document.querySelector(".active").setAttribute("class", "subcontainer hidden");
 
-
-    switch(id){
-        case 0:
-            state = "#zero";
-            break;
-        case 1:
-            state = "#one";
-            break;
-        case 2:
-            state = "#two";
-            break;
-        case 3:
-            state = "#three";
-            break;
-        case 4:
-            state = "#four";
-            break;
-        case 9:
-            state = "#nine";
-            break;
-        case 10:
-            state = "#ten";
-            break;
-        case 11:
-            state = "#eleven";
-            break;
-        default:
-            state = "#zero";
-    }
-
-    document.querySelector(state).style.animation = "in 1s";
-    document.querySelector(state).setAttribute("class",   "subcontainer active");
+    document.querySelector(slide[id]).style.animation = "in 1s";
+    document.querySelector(slide[id]).setAttribute("class",   "subcontainer active");
     await sleep(950);
     enableMenu();
-    document.querySelector(state).removeAttribute("style");
+    document.querySelector(slide[id]).removeAttribute("style");
 }
 
 async function send(value, response1, response2){
@@ -197,7 +177,7 @@ async function verify(){
 
     const data = await read_data();
 
-    if(document.querySelector('#four').classList.contains('active')){
+    if(document.querySelector('#five').classList.contains('active')){
         if(document.querySelector('#input').value <= data['pases'] && document.querySelector('#input').value > 0){
 
             if(data['cena']){
@@ -222,9 +202,9 @@ async function back(){
     const data = await read_data();
 
     if(data['pases'] > 1){
-        state(4);
+        state(5);
     }else{
-        state(3);
+        state(4);
     }
     changeBG(1);
 }
