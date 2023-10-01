@@ -599,6 +599,12 @@
             "registro": false,
             "pases": 6,
             "cena": true
+        },
+        "José Juan Núñez": {
+            "id": 100,
+            "registro": false,
+            "pases": 2,
+            "cena": true
         }
     }
 }
