@@ -248,7 +248,7 @@
         },
         "Alfonso Piedra": {
             "id": 41,
-            "registro": false,
+            "registro": true,
             "pases": 1,
             "cena": true
         },
