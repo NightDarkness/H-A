@@ -605,6 +605,12 @@
             "registro": false,
             "pases": 2,
             "cena": true
+        },
+        "Virginia Piedra y fam": {
+            "id": 101,
+            "registro": false,
+            "pases": 2,
+            "cena": true
         }
     }
 }
