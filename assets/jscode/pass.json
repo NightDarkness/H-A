@@ -611,6 +611,12 @@
             "registro": false,
             "pases": 2,
             "cena": true
+        },
+        "Graciela Piedra Ávalos": {
+            "id": 102,
+            "registro": false,
+            "pases": 2,
+            "cena": true
         }
     }
 }
