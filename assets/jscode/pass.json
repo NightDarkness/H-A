@@ -218,7 +218,7 @@
         },
         "Lourdes Piedra Sandoval": {
             "id": 36,
-            "registro": false,
+            "registro": true,
             "pases": 2,
             "cena": true
         },
@@ -308,7 +308,7 @@
         },
         "Veronica Piedra Sandoval": {
             "id": 51,
-            "registro": false,
+            "registro": true,
             "pases": 4,
             "cena": true
         },
