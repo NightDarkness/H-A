@@ -212,7 +212,7 @@
         },
         "Fam. Romo Corona": {
             "id": 35,
-            "registro": false,
+            "registro": true,
             "pases": 5,
             "cena": true
         },
