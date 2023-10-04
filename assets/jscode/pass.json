@@ -242,7 +242,7 @@
         },
         "Fam. Piedra Rubio": {
             "id": 40,
-            "registro": false,
+            "registro": true,
             "pases": 2,
             "cena": true
         },
