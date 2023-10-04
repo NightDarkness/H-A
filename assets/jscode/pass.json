@@ -266,7 +266,7 @@
         },
         "Fam. Garduño Piedra": {
             "id": 44,
-            "registro": false,
+            "registro": true,
             "pases": 3,
             "cena": true
         },
@@ -554,7 +554,7 @@
         },
         "Carolina Garduño y fam": {
             "id": 92,
-            "registro": false,
+            "registro": true,
             "pases": 2,
             "cena": false
         },
