@@ -188,7 +188,7 @@
         },
         "Fam. Piedra González": {
             "id": 31,
-            "registro": false,
+            "registro": true,
             "pases": 5,
             "cena": true
         },
