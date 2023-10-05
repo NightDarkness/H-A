@@ -440,7 +440,7 @@
         },
         "Gladys": {
             "id": 73,
-            "registro": false,
+            "registro": true,
             "pases": 1,
             "cena": false
         },
