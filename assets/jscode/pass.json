@@ -338,7 +338,7 @@
         },
         "Juan Nieto": {
             "id": 56,
-            "registro": false,
+            "registro": true,
             "pases": 2,
             "cena": true
         },
