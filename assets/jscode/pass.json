@@ -146,7 +146,7 @@
         },
         "Carlos Páez": {
             "id": 24,
-            "registro": false,
+            "registro": true,
             "pases": 1,
             "cena": true
         },
@@ -398,7 +398,7 @@
         },
         "Marisú Padilla": {
             "id": 66,
-            "registro": false,
+            "registro": true,
             "pases": 1,
             "cena": false
         },
