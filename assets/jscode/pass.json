@@ -476,7 +476,7 @@
         },
         "Gil Morales y esposa": {
             "id": 79,
-            "registro": false,
+            "registro": true,
             "pases": 2,
             "cena": true
         },
