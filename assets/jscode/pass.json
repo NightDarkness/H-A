@@ -152,7 +152,7 @@
         },
         "Bertha Vargas": {
             "id": 25,
-            "registro": false,
+            "registro": true,
             "pases": 1,
             "cena": false
         },
