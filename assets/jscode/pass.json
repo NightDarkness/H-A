@@ -416,7 +416,7 @@
         },
         "Andrea Terrazas": {
             "id": 69,
-            "registro": false,
+            "registro": true,
             "pases": 1,
             "cena": false
         },
@@ -524,7 +524,7 @@
         },
         "Eduardo Morales González y fam": {
             "id": 87,
-            "registro": false,
+            "registro": true,
             "pases": 2,
             "cena": true
         },
