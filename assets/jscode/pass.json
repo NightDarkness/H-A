@@ -320,7 +320,7 @@
         },
         "Fam. Varela Morales": {
             "id": 53,
-            "registro": false,
+            "registro": true,
             "pases": 3,
             "cena": true
         },
