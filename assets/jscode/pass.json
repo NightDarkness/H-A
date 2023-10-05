@@ -314,7 +314,7 @@
         },
         "Fam. Muñoz Ramos": {
             "id": 52,
-            "registro": false,
+            "registro": true,
             "pases": 2,
             "cena": true
         },
