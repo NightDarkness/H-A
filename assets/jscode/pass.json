@@ -134,13 +134,13 @@
         },
         "Marcela Orrantia": {
             "id": 22,
-            "registro": false,
+            "registro": true,
             "pases": 1,
             "cena": false
         },
         "Citlali Murillo": {
             "id": 23,
-            "registro": false,
+            "registro": true,
             "pases": 1,
             "cena": false
         },
@@ -422,7 +422,7 @@
         },
         "Diego Briseño": {
             "id": 70,
-            "registro": false,
+            "registro": true,
             "pases": 1,
             "cena": false
         },
