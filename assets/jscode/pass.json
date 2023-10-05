@@ -326,7 +326,7 @@
         },
         "Fam. Morales Sáenz": {
             "id": 54,
-            "registro": false,
+            "registro": true,
             "pases": 4,
             "cena": true
         },
@@ -344,13 +344,13 @@
         },
         "Fam. Hernández Gándara": {
             "id": 57,
-            "registro": false,
+            "registro": true,
             "pases": 5,
             "cena": true
         },
         "Guerrero Ramos": {
             "id": 58,
-            "registro": false,
+            "registro": true,
             "pases": 2,
             "cena": true
         },
@@ -404,7 +404,7 @@
         },
         "Daylin Del Río": {
             "id": 67,
-            "registro": false,
+            "registro": true,
             "pases": 1,
             "cena": false
         },
