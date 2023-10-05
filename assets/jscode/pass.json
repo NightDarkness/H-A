@@ -488,7 +488,7 @@
         },
         "Lupe Ontiveros Morales": {
             "id": 81,
-            "registro": false,
+            "registro": true,
             "pases": 2,
             "cena": true
         },
