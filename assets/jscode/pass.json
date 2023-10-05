@@ -617,6 +617,54 @@
             "registro": false,
             "pases": 2,
             "cena": true
+        },
+        "Diego Armendariz": {
+            "id": 103,
+            "registro": false,
+            "pases": 1,
+            "cena": true
+        },
+        "Jared Pérez": {
+            "id": 104,
+            "registro": false,
+            "pases": 1,
+            "cena": true
+        },
+        "Alejandro Cabrales": {
+            "id": 105,
+            "registro": false,
+            "pases": 1,
+            "cena": true
+        },
+        "Joe Luis Mora Arce": {
+            "id": 106,
+            "registro": true,
+            "pases": 5,
+            "cena": true
+        },
+        "Agustín Morales": {
+            "id": 107,
+            "registro": true,
+            "pases": 2,
+            "cena": true
+        },
+        "Eduardo Macias": {
+            "id": 108,
+            "registro": false,
+            "pases": 1,
+            "cena": true
+        },
+        "Ema Piedra": {
+            "id": 109,
+            "registro": true,
+            "pases": 2,
+            "cena": true
+        },
+        "Lourdes Paredes": {
+            "id": 110,
+            "registro": false,
+            "pases": 2,
+            "cena": true
         }
     }
 }
