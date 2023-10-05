@@ -446,7 +446,7 @@
         },
         "Fam. Pérez Varela": {
             "id": 74,
-            "registro": false,
+            "registro": true,
             "pases": 2,
             "cena": true
         },
