@@ -176,7 +176,7 @@
         },
         "Fam. Galindo Carbajal": {
             "id": 29,
-            "registro": false,
+            "registro": true,
             "pases": 4,
             "cena": false
         },
