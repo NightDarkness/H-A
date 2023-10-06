@@ -128,7 +128,7 @@
         },
         "Bertha Alicia": {
             "id": 21,
-            "registro": false,
+            "registro": true,
             "pases": 1,
             "cena": false
         },
