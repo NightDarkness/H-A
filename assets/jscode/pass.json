@@ -368,7 +368,7 @@
         },
         "Fam. Molina Ramos": {
             "id": 61,
-            "registro": false,
+            "registro": true,
             "pases": 3,
             "cena": true
         },
@@ -632,7 +632,7 @@
         },
         "Alejandro Cabrales": {
             "id": 105,
-            "registro": false,
+            "registro": true,
             "pases": 1,
             "cena": false
         },
@@ -650,7 +650,7 @@
         },
         "Eduardo Macias": {
             "id": 108,
-            "registro": false,
+            "registro": true,
             "pases": 1,
             "cena": false
         },
