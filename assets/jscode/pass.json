@@ -665,6 +665,12 @@
             "registro": false,
             "pases": 2,
             "cena": false
+        },
+        "Lerna Bujanda Lozoya": {
+            "id": 111,
+            "registro": false,
+            "pases": 2,
+            "cena": false
         }
     }
 }
