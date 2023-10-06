@@ -158,7 +158,7 @@
         },
         "Fam. Saucedo Loya": {
             "id": 26,
-            "registro": false,
+            "registro": true,
             "pases": 3,
             "cena": false
         },
@@ -626,7 +626,7 @@
         },
         "Jared Pérez": {
             "id": 104,
-            "registro": false,
+            "registro": true,
             "pases": 1,
             "cena": false
         },
