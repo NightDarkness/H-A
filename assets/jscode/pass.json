@@ -44,7 +44,7 @@
         },
         "Mónica Luévano": {
             "id": 7,
-            "registro": false,
+            "registro": true,
             "pases": 2,
             "cena": false
         },
@@ -122,7 +122,7 @@
         },
         "Leticia Araiza": {
             "id": 20,
-            "registro": false,
+            "registro": true,
             "pases": 1,
             "cena": false
         },
