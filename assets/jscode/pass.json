@@ -56,7 +56,7 @@
         },
         "Daisy Villegas": {
             "id": 9,
-            "registro": false,
+            "registro": true,
             "pases": 2,
             "cena": false
         },
