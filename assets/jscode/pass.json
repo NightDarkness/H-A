@@ -622,29 +622,29 @@
             "id": 103,
             "registro": false,
             "pases": 1,
-            "cena": true
+            "cena": false
         },
         "Jared Pérez": {
             "id": 104,
             "registro": false,
             "pases": 1,
-            "cena": true
+            "cena": false
         },
         "Alejandro Cabrales": {
             "id": 105,
             "registro": false,
             "pases": 1,
-            "cena": true
+            "cena": false
         },
         "Joe Luis Mora Arce": {
             "id": 106,
-            "registro": true,
+            "registro": false,
             "pases": 5,
             "cena": true
         },
         "Agustín Morales": {
             "id": 107,
-            "registro": true,
+            "registro": false,
             "pases": 2,
             "cena": true
         },
@@ -652,11 +652,11 @@
             "id": 108,
             "registro": false,
             "pases": 1,
-            "cena": true
+            "cena": false
         },
         "Ema Pedra": {
             "id": 109,
-            "registro": true,
+            "registro": false,
             "pases": 2,
             "cena": true
         },
@@ -664,7 +664,7 @@
             "id": 110,
             "registro": false,
             "pases": 2,
-            "cena": true
+            "cena": false
         }
     }
 }
