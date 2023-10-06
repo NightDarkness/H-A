@@ -50,7 +50,7 @@
         },
         "Karla Morales": {
             "id": 8,
-            "registro": false,
+            "registro": true,
             "pases": 2,
             "cena": false
         },
@@ -80,13 +80,13 @@
         },
         "Graciela Elías": {
             "id": 13,
-            "registro": false,
+            "registro": true,
             "pases": 1,
             "cena": false
         },
         "Fam. Gómez": {
             "id": 14,
-            "registro": false,
+            "registro": true,
             "pases": 3,
             "cena": true
         },
@@ -116,7 +116,7 @@
         },
         "Hermila González": {
             "id": 19,
-            "registro": false,
+            "registro": true,
             "pases": 1,
             "cena": false
         },
