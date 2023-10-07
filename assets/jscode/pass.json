@@ -62,19 +62,19 @@
         },
         "Mariana Yañez": {
             "id": 10,
-            "registro": false,
+            "registro": true,
             "pases": 1,
             "cena": false
         },
         "Brianda Luna": {
             "id": 11,
-            "registro": false,
+            "registro": true,
             "pases": 2,
             "cena": false
         },
         "Diana García": {
             "id": 12,
-            "registro": false,
+            "registro": true,
             "pases": 1,
             "cena": false
         },
@@ -98,13 +98,13 @@
         },
         "Rocío Orozco": {
             "id": 16,
-            "registro": false,
+            "registro": true,
             "pases": 2,
             "cena": false
         },
         "Yesenia Ramos": {
             "id": 17,
-            "registro": false,
+            "registro": true,
             "pases": 2,
             "cena": false
         },
@@ -200,13 +200,13 @@
         },
         "Elizabeth Soto": {
             "id": 33,
-            "registro": false,
+            "registro": true,
             "pases": 1,
             "cena": false
         },
         "Guadalupe Lucero": {
             "id": 34,
-            "registro": false,
+            "registro": true,
             "pases": 1,
             "cena": false
         },
@@ -224,7 +224,7 @@
         },
         "Matha Piedra Sandoval": {
             "id": 37,
-            "registro": false,
+            "registro": true,
             "pases": 2,
             "cena": true
         },
@@ -302,7 +302,7 @@
         },
         "Socorro Piedra Sandoval": {
             "id": 50,
-            "registro": false,
+            "registro": true,
             "pases": 2,
             "cena": true
         },
@@ -668,7 +668,7 @@
         },
         "Lerna Bujanda Lozoya": {
             "id": 111,
-            "registro": false,
+            "registro": true,
             "pases": 2,
             "cena": false
         }
