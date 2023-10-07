@@ -638,7 +638,7 @@
         },
         "Joe Luis Mora Arce": {
             "id": 106,
-            "registro": false,
+            "registro": true,
             "pases": 5,
             "cena": true
         },
