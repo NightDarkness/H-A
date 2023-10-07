@@ -506,7 +506,7 @@
         },
         "Saúl Morales Gonzélez y fam.": {
             "id": 84,
-            "registro": false,
+            "registro": true,
             "pases": 5,
             "cena": true
         },
@@ -530,7 +530,7 @@
         },
         "Fam. Vega Morales": {
             "id": 88,
-            "registro": false,
+            "registro": true,
             "pases": 2,
             "cena": true
         },
