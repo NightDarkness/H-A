@@ -164,7 +164,7 @@
         },
         "Fam. Sandoval Gaytan": {
             "id": 27,
-            "registro": false,
+            "registro": true,
             "pases": 4,
             "cena": false
         },
@@ -278,19 +278,19 @@
         },
         "Fam. Tovar Cazares": {
             "id": 46,
-            "registro": false,
+            "registro": true,
             "pases": 3,
             "cena": false
         },
         "Fam. Barraza Tovar": {
             "id": 47,
-            "registro": false,
+            "registro": true,
             "pases": 2,
             "cena": false
         },
         "Fam. Tovar Piedra": {
             "id": 48,
-            "registro": false,
+            "registro": true,
             "pases": 3,
             "cena": false
         },
@@ -452,7 +452,7 @@
         },
         "Evelyn Ontiveros": {
             "id": 75,
-            "registro": false,
+            "registro": true,
             "pases": 2,
             "cena": true
         },
@@ -644,7 +644,7 @@
         },
         "Agustín Morales": {
             "id": 107,
-            "registro": false,
+            "registro": true,
             "pases": 2,
             "cena": true
         },
