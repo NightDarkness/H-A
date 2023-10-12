@@ -92,7 +92,7 @@
         },
         "Fam. Pólito Alonso": {
             "id": 15,
-            "registro": false,
+            "registro": true,
             "pases": 2,
             "cena": false
         },
@@ -236,7 +236,7 @@
         },
         "Fam. Castañeda Piedra": {
             "id": 39,
-            "registro": false,
+            "registro": true,
             "pases": 6,
             "cena": true
         },
@@ -494,7 +494,7 @@
         },
         "Fam. Arvizo Morales": {
             "id": 82,
-            "registro": false,
+            "registro": true,
             "pases": 4,
             "cena": true
         },
@@ -584,7 +584,7 @@
         },
         "Fam. Cuellar Piedra": {
             "id": 97,
-            "registro": false,
+            "registro": true,
             "pases": 3,
             "cena": true
         },
@@ -602,7 +602,7 @@
         },
         "José Juan Núñez": {
             "id": 100,
-            "registro": false,
+            "registro": true,
             "pases": 2,
             "cena": true
         },
@@ -614,7 +614,7 @@
         },
         "Graciela Piedra Ávalos": {
             "id": 102,
-            "registro": false,
+            "registro": true,
             "pases": 2,
             "cena": true
         },
@@ -656,13 +656,13 @@
         },
         "Ema Pedra": {
             "id": 109,
-            "registro": false,
+            "registro": true,
             "pases": 2,
             "cena": true
         },
         "Lourdes Paredes": {
             "id": 110,
-            "registro": false,
+            "registro": true,
             "pases": 2,
             "cena": false
         },
