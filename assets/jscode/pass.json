@@ -548,7 +548,7 @@
         },
         "Martín Garduño y fam.": {
             "id": 91,
-            "registro": false,
+            "registro": true,
             "pases": 2,
             "cena": false
         },
@@ -578,7 +578,7 @@
         },
         "Fam. Zepeda Piedra": {
             "id": 96,
-            "registro": false,
+            "registro": true,
             "pases": 3,
             "cena": true
         },
