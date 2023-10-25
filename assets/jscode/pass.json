@@ -260,7 +260,7 @@
         },
         "Elvira Medrano": {
             "id": 43,
-            "registro": false,
+            "registro": true,
             "pases": 3,
             "cena": false
         },
